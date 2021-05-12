@@ -1,0 +1,76 @@
+
+.textInput {
+  display: flex;
+  width: 450px;
+  background: #b3b9bc;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.input {
+  display: flex;
+  width: 190px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 5px;
+  background: whitesmoke;
+  margin: 10px;
+}
+
+.icon-i {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  justify-self: center;
+}
+
+.icon-plus {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 40px;
+  padding: 10px 5px;
+  background: whitesmoke;
+  margin-right: 10px;
+  border-radius: 10px;
+  opacity: .6;
+  text-transform: uppercase;
+}
+
+.icon-plus:hover,
+.icon-plus:active {
+  background: #a7a7a7;
+  opacity: 1;
+}
+
+input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  background: whitesmoke;
+  outline: none;
+  padding: 3px;  
+}
+i {
+  cursor: pointer;
+  margin: 10%;
+}
+
+.left{
+  justify-content: center;  
+  align-items: center;
+}
+
+.all{
+  width: 100%;
+  display: flex;
+}
+
+h2{
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+}
