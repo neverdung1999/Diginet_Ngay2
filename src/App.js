@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Input from "./components/textInput/Index";
 
-function App(props) {  
+function App(props) {
   return (
     <div>
       <Input />

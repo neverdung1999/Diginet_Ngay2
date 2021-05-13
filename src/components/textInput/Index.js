@@ -49,7 +49,12 @@ function Index(props) {
             ))}
           </div>
         ) : (
-          <div className="textInput" style={{ opacity: 0 }}></div>
+          <div
+            className="textInput"
+            style={{
+              opacity: 0,
+            }}
+          ></div>
         )}
       </div>
       <Circle number={number} />

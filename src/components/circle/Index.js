@@ -2,14 +2,17 @@ import _ from "lodash";
 import React, { useState } from "react";
 import "./styles.css";
 
+let numberRandom = 5000;
+
 function Index(props) {
   const { number } = props;
   const [addCss, setAddCss] = useState({
     transform: "",
   });
   const handleSpin = () => {
-    let number = Math.ceil(Math.random() * 10000);
-    let onClick = "rotate(" + number + "deg)";
+    // let number = Math.ceil(Math.random() * 10000);
+    let onClick = "rotate(" + numberRandom + "deg)";
+    numberRandom += 5000;
     setAddCss({
       transform: onClick,
     });
@@ -34,27 +37,40 @@ function Index(props) {
         Spin
       </button>
       <span className="arrow"></span>
-      <div
-        className="container"
-        style={{
-          transform: addCss.transform,
-          background: `conic-gradient(${aaaReverse})`,
-        }}
-      >
-        {number.map((value, index) => {
-          return (
-            <div
-              key={index}
-              className="text"
-              style={{
-                transform: `rotate(${360 / count / 2 + ketQua * index}deg)`,
-              }}
-            >
-              {value}
-            </div>
-          );
-        })}
-      </div>
+      {number.length > 0 ? (
+        <div
+          className="container"
+          style={{
+            transform: addCss.transform,
+            background: `conic-gradient(${aaaReverse})`,
+          }}
+        >
+          {number.map((value, index) => {
+            return (
+              <div
+                key={index}
+                className="text"
+                style={{
+                  transform: `rotate(${360 / count / 2 + ketQua * index}deg)`,
+                }}
+              >
+                <span id="value-span">{value}</span>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div
+          className="container"
+          style={{
+            transform: addCss.transform,
+            background: `conic-gradient(${aaaReverse})`,
+            animationName: "example",
+            animationDuration: "4s",
+            animationIterationCount: "infinite",
+          }}
+        ></div>
+      )}
     </div>
   );
 }
