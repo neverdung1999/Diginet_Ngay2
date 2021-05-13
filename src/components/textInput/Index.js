@@ -1,30 +1,19 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Circle from "../circle/Index";
-import _ from "lodash";
 
 function Index(props) {
   const [number, setNumber] = useState([]);
+  const [color, setColor] = useState([]);
 
   const addItem = () => {
     if (number.length > 9) {
       alert("Thôi đủ rồi, nạp VIP để mở thêm !!!");
     } else {
+      var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      setColor([...color, randomColor]);
       setNumber([...number, ""]);
     }
-    let count = number.length;
-    let result = 0;
-    let soNhan = 100 / count;
-    let arrTamtest = [];
-
-    number.forEach((e, index) => {
-      var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-      result = soNhan * (index + 1);
-      let onClick = "#" + randomColor + " 0 " + result + "%";
-      arrTamtest.push(onClick);
-    });
-    // const aaaReverse = [...arrTamtest].join();
-    console.log(arrTamtest);
   };
 
   const hadleChange = (e, index) => {
@@ -70,7 +59,7 @@ function Index(props) {
           ></div>
         )}
       </div>
-      <Circle number={number} />
+      <Circle number={number} color={color} />
     </div>
   );
 }
