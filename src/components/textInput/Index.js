@@ -12,6 +12,19 @@ function Index(props) {
     } else {
       setNumber([...number, ""]);
     }
+    let count = number.length;
+    let result = 0;
+    let soNhan = 100 / count;
+    let arrTamtest = [];
+
+    number.forEach((e, index) => {
+      var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      result = soNhan * (index + 1);
+      let onClick = "#" + randomColor + " 0 " + result + "%";
+      arrTamtest.push(onClick);
+    });
+    // const aaaReverse = [...arrTamtest].join();
+    console.log(arrTamtest);
   };
 
   const hadleChange = (e, index) => {
