@@ -31,12 +31,14 @@ body {
   border: 15px solid #dde;
   position: relative;
   overflow: hidden;
-  transition: all 10s;
+  transition: all 1s;
   margin-left: 100px;
 }
 
 @keyframes example {
-  100% {transform: rotate(100000deg);}
+  100% {
+    transform: rotate(100000deg);
+  }
 }
 
 .container div {
@@ -73,7 +75,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(295%, -50%);
+  transform: translate(295%, -70%);
   z-index: 10;
   background-color: #e2e2e2;
   text-transform: uppercase;
@@ -105,30 +107,27 @@ body {
   font-size: 20px;
 }
 
-.notiAll{
+.notiAll {
   display: flex;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 99;
 }
 
-.alert_success{
+.alert_success {
   left: 0;
   right: 0;
   top: 30%;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
-  color: red;
   width: 800px;
-  height: 230px;
   text-align: center;
   border-radius: 20px;
-  font-size: 20px;
   background: white;
   color: #363636;
   padding: 10px;
@@ -136,7 +135,23 @@ body {
   /* transform: translate(-50%, -50%) */
 }
 
-.btnCloseNoti{
+.tableRank {
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  width: 800px;
+  text-align: center;
+  border-radius: 20px;
+  background: white;
+  color: #363636;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.btnCloseNoti {
   width: 100px;
   height: 40px;
   border-radius: 5px;
@@ -145,6 +160,23 @@ body {
   cursor: pointer;
 }
 
-p{
+p {
   text-transform: capitalize;
+}
+
+.btnRank{
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btnRank:hover, .btnRank:active{
+  background: #cfcfcf;
+  opacity: 1;
+}
+
+.user_ranking{
+  font-size: 20px;
 }
